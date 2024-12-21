@@ -1,0 +1,328 @@
+/* Reset e Stili Generali */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif; /* Sostituisci con il font preferito */
+    line-height: 1.6;
+    color: #333; /* Colore di testo predefinito */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%; /* Assicura che le immagini siano responsive */
+    display: block; /* Rimuove spazio extra sotto le immagini */
+    height: auto; /* Altezza automatica */
+}
+
+/* Contenitori */
+.tcontainern {
+    width: 90%;
+    max-width: 1200px; /* Larghezza massima del contenitore */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.rd {
+    padding: 20px 0; /* Spazio verticale standard per le sezioni */
+}
+
+.nw {
+    padding-top: 60px; /* Margine superiore per il contenuto principale */
+}
+.mb-40 {
+    margin-bottom: 40px;
+}
+.oh{
+    display: flex;
+}
+
+/* Header */
+.nb {
+    background-color: #f0f0f0; /* Sfondo dell'header */
+    padding: 15px 0;
+    position: sticky; /* Header fisso */
+    top: 0;
+    z-index: 100;
+}
+
+.n_ {
+    display: flex;
+    justify-content: space-between; /* Allinea logo e menu ai bordi */
+    align-items: center;
+}
+
+.nk img {
+    height: auto;
+    max-width: 130px;
+}
+
+.th {
+    display: none; /* Nasconde il pulsante menu per schermi larghi */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.nj {
+    display: block; /* Mostra menu di navigazione per schermi larghi */
+}
+.nj.active{
+    display: block;
+}
+.nq {
+    display: flex;
+    align-items: center;
+}
+
+.st {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.st li {
+    margin: 0 10px; /* Spazio tra le voci di menu */
+}
+
+/* Pulsanti */
+.tbuttonn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.fbuttonl {
+    background-color: #29284e; /* Colore principale pulsanti */
+    color: white;
+}
+
+.gbuttony {
+    background-color: #f5df68;
+    color: black;
+}
+
+.pbuttond{
+    padding: 10px 10px;
+}
+.input-amount {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/* Sezioni */
+.rb {
+    background-color: #f0f0f0;
+}
+
+.s_ {
+    padding: 40px 0;
+}
+.s_{
+    background-color: #fff;
+}
+.r_ {
+    background-color: #f0f0f0;
+}
+
+/* Sezioni */
+.split-item {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.split-item .nh{
+    width: 100%;
+}
+.split-item .nl{
+    width: 100%;
+}
+.split-item img {
+    max-width: 100%;
+}
+
+.oe {
+    font-size: 24px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+.oe.ok{
+    font-size: 35px;
+}
+
+.og{
+    font-size: 20px;
+}
+.on{
+    font-size: 18px;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .tcontainern {
+        width: 90%;
+    }
+    .split-item {
+        flex-direction: row;
+        align-items: center;
+    }
+     .split-item .nh{
+        width: 50%;
+    }
+    .split-item .nl{
+        width: 50%;
+    }
+    .nj {
+         display: block !important;
+     }
+     .th{
+        display: none;
+     }
+     .nj .nq ul{
+        display: flex;
+     }
+
+}
+@media (max-width: 767px) {
+    .th {
+        display: block; /* Mostra il pulsante menu per schermi piccoli */
+    }
+    .nj {
+        display: none; /* Nasconde menu di navigazione su schermi piccoli */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #f0f0f0;
+        padding: 10px 0;
+    }
+    .nj.active {
+        display: block; /* Mostra il menu quando è attivo */
+    }
+    .nq{
+        display: block;
+        text-align: center;
+    }
+    .nq ul{
+        flex-direction: column;
+    }
+    .nq ul li {
+        margin: 10px 0;
+    }
+    .nq ul.re{
+        margin-top: 10px;
+    }
+
+}
+@media (max-width: 500px) {
+    .oe{
+        font-size: 20px;
+    }
+    .oe.ok{
+        font-size: 25px;
+    }
+}
+/* Footer */
+.rr {
+    padding: 20px 0;
+    text-align: center;
+}
+/* Animazioni di reveal */
+.reveal-from-top{
+    animation: revealTop 1.3s ease-in-out;
+}
+@keyframes revealTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.reveal-from-bottom{
+    animation: revealBottom 1.3s ease-in-out;
+}
+@keyframes revealBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.reveal-from-left{
+    animation: revealLeft 1.3s ease-in-out;
+}
+@keyframes revealLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.reveal-from-right{
+    animation: revealRight 1.3s ease-in-out;
+}
+@keyframes revealRight {
+    0% {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.pricing-inner .tiles-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.pricing-inner .tiles-wrap .ng {
+    width: 100%;
+    margin: 10px;
+}
+.pricing-inner .tiles-wrap .ng .ny {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+}
+.pricing-inner .tiles-wrap .ng .ny .rj{
+    display: block;
+    text-align: center;
+}
+.pricing-inner .tiles-wrap .ng .ny .rj ul{
+    margin: 15px 0;
+}
+.pricing-inner .tiles-wrap .ng .ny .rj ul li{
+    margin-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+    .pricing-inner .tiles-wrap .ng {
+         width: 45%;
+    }
+}
